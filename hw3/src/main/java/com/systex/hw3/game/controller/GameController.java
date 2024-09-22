@@ -34,7 +34,7 @@ public class GameController extends HttpServlet {
 				request.getRequestDispatcher("/game/youWin.jsp").forward(request, response);
 			} else {
 				if (game.getRemains() == 0) {
-					request.getRequestDispatcher("/gameyouLose.jsp").forward(request, response);
+					request.getRequestDispatcher("/game/youLose.jsp").forward(request, response);
 				} else {
 					request.setAttribute("errorMsg", "Wrong!");
 					request.getRequestDispatcher("/game/guess.jsp").forward(request, response);
